@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Button Demo</title>
+    <style>
+      /* Style for the buttons */
+      .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px;
+        cursor: pointer;
+      }
+
+      /* Style for the active button */
+      .active {
+        background-color: #008CBA;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Button Demo</h1>
+
+    <button class="button" onclick="alert('You clicked the first button!')">Button 1</button>
+
+    <button id="button2" class="button" onclick="document.getElementById('button2').classList.add('active')">Button 2</button>
+
+    <button class="button" onclick="toggleButton(this)">Button 3</button>
+
+    <script>
+      /* JavaScript code to toggle the active state of Button 3 */
+      function toggleButton(button) {
+        button.classList.toggle('active');
+      }
+    </script>
+  </body>
+</html>
